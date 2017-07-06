@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frE-T7-S0u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Action Request Handler-->
+        <scene sceneID="CDZ-Gf-3Fb">
+            <objects>
+                <viewController id="bok-qR-6pc" customClass="ActionRequestHandler" customModule="Playback_Action" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9AN-W0-Oi0"/>
+                        <viewControllerLayoutGuide type="bottom" id="jSK-HV-Np6"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Tyx-zn-xye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playback Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-en-B7q">
+                                <rect key="frame" x="126" y="254" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="B8I-wi-hd6">
+                                <rect key="frame" x="14" y="283" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="bok-qR-6pc" eventType="valueChanged" id="sDI-31-rgD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCL-uc-IJS">
+                                <rect key="frame" x="176" y="323" width="22" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Dh-en-B7q" firstAttribute="top" secondItem="9AN-W0-Oi0" secondAttribute="bottom" constant="190" id="2VK-6c-T7a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B8I-wi-hd6" secondAttribute="trailing" id="4sM-fF-I4G"/>
+                            <constraint firstItem="pCL-uc-IJS" firstAttribute="centerX" secondItem="B8I-wi-hd6" secondAttribute="centerX" id="5co-E4-WaI"/>
+                            <constraint firstItem="B8I-wi-hd6" firstAttribute="leading" secondItem="Tyx-zn-xye" secondAttribute="leadingMargin" id="CjS-FT-rg7"/>
+                            <constraint firstItem="3Dh-en-B7q" firstAttribute="centerX" secondItem="Tyx-zn-xye" secondAttribute="centerX" id="Pv5-26-WAf"/>
+                            <constraint firstItem="B8I-wi-hd6" firstAttribute="centerX" secondItem="Tyx-zn-xye" secondAttribute="centerX" id="bxe-In-Knl"/>
+                            <constraint firstItem="pCL-uc-IJS" firstAttribute="top" secondItem="B8I-wi-hd6" secondAttribute="bottom" constant="10" id="hRr-KK-hhN"/>
+                            <constraint firstItem="B8I-wi-hd6" firstAttribute="top" secondItem="3Dh-en-B7q" secondAttribute="bottom" constant="8" id="mzc-Lr-Yrg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4lj-h2-TOA">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ccv-Tj-z0W">
+                            <connections>
+                                <action selector="close:" destination="bok-qR-6pc" id="ICp-R5-PIV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="slider" destination="B8I-wi-hd6" id="P3A-gc-NLM"/>
+                        <outlet property="speed" destination="pCL-uc-IJS" id="pGM-uS-pKI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTR-2q-W03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="194.75262368815595"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Zj-Rl-OTW">
+            <objects>
+                <navigationController id="frE-T7-S0u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zQO-kl-BCM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bok-qR-6pc" kind="relationship" relationship="rootViewController" id="A61-Kr-4MH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBg-wF-uuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="195"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,12 +12,11 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.description
+                label.text = detail
             }
         }
     }
@@ -26,14 +25,18 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
+        
+        let webButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(openSafari))
+        navigationItem.rightBarButtonItem = webButton
+    }
+    
+    func openSafari() {
+        if let detail = detailItem {
+            UIApplication.shared.open(URL(string: detail)!)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    var detailItem: NSDate? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             configureView()

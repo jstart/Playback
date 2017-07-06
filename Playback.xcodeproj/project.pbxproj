@@ -13,7 +13,37 @@
 		23FC333D1F0606EA004D7250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FC333B1F0606EA004D7250 /* Main.storyboard */; };
 		23FC333F1F0606EA004D7250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FC333E1F0606EA004D7250 /* Assets.xcassets */; };
 		23FC33421F0606EA004D7250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FC33401F0606EA004D7250 /* LaunchScreen.storyboard */; };
+		23FC33631F060792004D7250 /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FC33621F060792004D7250 /* ActionRequestHandler.swift */; };
+		23FC33651F060792004D7250 /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 23FC33641F060792004D7250 /* Action.js */; };
+		23FC33691F060792004D7250 /* Playback Action.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 23FC33601F060792004D7250 /* Playback Action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		23FC336E1F061516004D7250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23FC336D1F061516004D7250 /* Main.storyboard */; };
+		23FC33721F062779004D7250 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FC33711F062779004D7250 /* Icon.xcassets */; };
+		23FC33961F062F71004D7250 /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FC33711F062779004D7250 /* Icon.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23FC33671F060792004D7250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23FC332A1F0606EA004D7250 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23FC335F1F060792004D7250;
+			remoteInfo = "Playback Action";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23FC335B1F06076C004D7250 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				23FC33691F060792004D7250 /* Playback Action.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		23FC33321F0606EA004D7250 /* Playback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playback.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +54,25 @@
 		23FC333E1F0606EA004D7250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23FC33411F0606EA004D7250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23FC33431F0606EA004D7250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FC33601F060792004D7250 /* Playback Action.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Playback Action.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FC33621F060792004D7250 /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		23FC33641F060792004D7250 /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		23FC33661F060792004D7250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FC336D1F061516004D7250 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		23FC336F1F0626A2004D7250 /* Playback.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Playback.entitlements; sourceTree = "<group>"; };
+		23FC33701F0626E1004D7250 /* Playback Action.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Playback Action.entitlements"; sourceTree = "<group>"; };
+		23FC33711F062779004D7250 /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		23FC332F1F0606EA004D7250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FC335D1F060792004D7250 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				23FC33341F0606EA004D7250 /* Playback */,
+				23FC33611F060792004D7250 /* Playback Action */,
 				23FC33331F0606EA004D7250 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				23FC33321F0606EA004D7250 /* Playback.app */,
+				23FC33601F060792004D7250 /* Playback Action.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +103,7 @@
 		23FC33341F0606EA004D7250 /* Playback */ = {
 			isa = PBXGroup;
 			children = (
+				23FC336F1F0626A2004D7250 /* Playback.entitlements */,
 				23FC33351F0606EA004D7250 /* AppDelegate.swift */,
 				23FC33371F0606EA004D7250 /* MasterViewController.swift */,
 				23FC33391F0606EA004D7250 /* DetailViewController.swift */,
@@ -65,6 +113,19 @@
 				23FC33431F0606EA004D7250 /* Info.plist */,
 			);
 			path = Playback;
+			sourceTree = "<group>";
+		};
+		23FC33611F060792004D7250 /* Playback Action */ = {
+			isa = PBXGroup;
+			children = (
+				23FC33701F0626E1004D7250 /* Playback Action.entitlements */,
+				23FC33621F060792004D7250 /* ActionRequestHandler.swift */,
+				23FC33641F060792004D7250 /* Action.js */,
+				23FC33661F060792004D7250 /* Info.plist */,
+				23FC336D1F061516004D7250 /* Main.storyboard */,
+				23FC33711F062779004D7250 /* Icon.xcassets */,
+			);
+			path = "Playback Action";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +138,34 @@
 				23FC332E1F0606EA004D7250 /* Sources */,
 				23FC332F1F0606EA004D7250 /* Frameworks */,
 				23FC33301F0606EA004D7250 /* Resources */,
+				23FC335B1F06076C004D7250 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				23FC33681F060792004D7250 /* PBXTargetDependency */,
 			);
 			name = Playback;
 			productName = Playback;
 			productReference = 23FC33321F0606EA004D7250 /* Playback.app */;
 			productType = "com.apple.product-type.application";
+		};
+		23FC335F1F060792004D7250 /* Playback Action */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FC336A1F060792004D7250 /* Build configuration list for PBXNativeTarget "Playback Action" */;
+			buildPhases = (
+				23FC335C1F060792004D7250 /* Sources */,
+				23FC335D1F060792004D7250 /* Frameworks */,
+				23FC335E1F060792004D7250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Playback Action";
+			productName = "Playback Action";
+			productReference = 23FC33601F060792004D7250 /* Playback Action.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +181,21 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PP6S682Z9F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					23FC335F1F060792004D7250 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PP6S682Z9F;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -118,6 +213,7 @@
 			projectRoot = "";
 			targets = (
 				23FC33311F0606EA004D7250 /* Playback */,
+				23FC335F1F060792004D7250 /* Playback Action */,
 			);
 		};
 /* End PBXProject section */
@@ -129,7 +225,18 @@
 			files = (
 				23FC33421F0606EA004D7250 /* LaunchScreen.storyboard in Resources */,
 				23FC333F1F0606EA004D7250 /* Assets.xcassets in Resources */,
+				23FC33961F062F71004D7250 /* Icon.xcassets in Resources */,
 				23FC333D1F0606EA004D7250 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FC335E1F060792004D7250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FC33721F062779004D7250 /* Icon.xcassets in Resources */,
+				23FC33651F060792004D7250 /* Action.js in Resources */,
+				23FC336E1F061516004D7250 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +253,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		23FC335C1F060792004D7250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FC33631F060792004D7250 /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23FC33681F060792004D7250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23FC335F1F060792004D7250 /* Playback Action */;
+			targetProxy = 23FC33671F060792004D7250 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		23FC333B1F0606EA004D7250 /* Main.storyboard */ = {
@@ -266,7 +389,9 @@
 		23FC33471F0606EA004D7250 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Playback/Playback.entitlements;
 				DEVELOPMENT_TEAM = PP6S682Z9F;
 				INFOPLIST_FILE = Playback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -279,12 +404,44 @@
 		23FC33481F0606EA004D7250 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Playback/Playback.entitlements;
 				DEVELOPMENT_TEAM = PP6S682Z9F;
 				INFOPLIST_FILE = Playback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = truman.Playback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		23FC336B1F060792004D7250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Playback Action/Playback Action.entitlements";
+				DEVELOPMENT_TEAM = PP6S682Z9F;
+				INFOPLIST_FILE = "Playback Action/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "truman.Playback.Playback-Action";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		23FC336C1F060792004D7250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Playback Action/Playback Action.entitlements";
+				DEVELOPMENT_TEAM = PP6S682Z9F;
+				INFOPLIST_FILE = "Playback Action/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "truman.Playback.Playback-Action";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -306,6 +463,14 @@
 			buildConfigurations = (
 				23FC33471F0606EA004D7250 /* Debug */,
 				23FC33481F0606EA004D7250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		23FC336A1F060792004D7250 /* Build configuration list for PBXNativeTarget "Playback Action" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FC336B1F060792004D7250 /* Debug */,
+				23FC336C1F060792004D7250 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
