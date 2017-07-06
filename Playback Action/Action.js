@@ -12,7 +12,7 @@ Action.prototype = {
     
     run: function(arguments) {
         var video = document.getElementsByTagName('video')[0];
-        arguments.completionFunction({"speed": video.playbackRate, "baseURI": document.baseURI})
+        arguments.completionFunction({"speed": video.playbackRate, "baseURI": document.baseURI, "title": document.title})
     },
     
     finalize: function(arguments) {

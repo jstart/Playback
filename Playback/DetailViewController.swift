@@ -23,7 +23,6 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         configureView()
         
         let webButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(openSafari))
@@ -38,7 +37,6 @@ class DetailViewController: UIViewController {
 
     var detailItem: String? {
         didSet {
-            // Update the view.
             configureView()
         }
     }

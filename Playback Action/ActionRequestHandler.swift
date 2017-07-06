@@ -30,7 +30,13 @@ class ActionRequestHandler: UIViewController {
         guard provider.hasItemConformingToTypeIdentifier(kUTTypePropertyList as String) else { return }
         provider.loadItem(forTypeIdentifier: kUTTypePropertyList as String, options: nil, completionHandler: {
             (list, error) in
-            guard let results = list as? NSDictionary else { return }
+            guard let results = list as? NSDictionary else {
+                OperationQueue.main.addOperation {
+                    self.slider.isHidden = true
+                    self.speed.text = "No Video Found"
+                }
+                return
+            }
             OperationQueue.main.addOperation {
                 self.itemLoadCompletedWithPreprocessingResults(results[NSExtensionJavaScriptPreprocessingResultsKey] as! [String: Any]? ?? [:])
             }
@@ -61,8 +67,11 @@ class ActionRequestHandler: UIViewController {
         slider.value = value
         
         let baseURI = javaScriptPreprocessingResults["baseURI"] as! String
-        print(baseURI)
-        title = baseURI
+        let videoTitle = javaScriptPreprocessingResults["title"] as! String
+        
+        
+
+        title = videoTitle
         
         let defaults = UserDefaults(suiteName: "group.truman.Playback")
         var URLs = defaults?.array(forKey: "URLs") as? [String] ?? [String]()
@@ -70,6 +79,13 @@ class ActionRequestHandler: UIViewController {
         if !URLs.contains(baseURI) {
             URLs.append(baseURI)
             defaults?.set(URLs, forKey: "URLs")
+        }
+        
+        var titles = defaults?.array(forKey: "Titles") as? [String] ?? [String]()
+        
+        if !titles.contains(videoTitle) {
+            titles.append(videoTitle)
+            defaults?.set(titles, forKey: "Titles")
         }
     }
 
